@@ -2,7 +2,7 @@
 if (!isset($_POST['username'])) {
     die('');
 }
-include('../../Components/ketnoi.php');
+include('../Components/ketnoi.php');
 
 header('Content-Type: text/html; charset=UTF-8');
 
@@ -13,17 +13,16 @@ $name = addslashes($_POST['name']);
 $email = addslashes($_POST['email']);
 
 if (!$username || !$pass || !$re_pass || !$name || !$email) {
-    echo "Vui lòng nhập đầy đủ thông tin. <a href='javascript: history.go(-1)'>Trở lại</a>";
+    echo '<script>alert("Vui lòng nhập đầy đủ thông tin"); window.location="index.php";</script>';
     exit;
 }
 
-// $sql = "INSERT INTO `user` (`ID`, `Name`, `UserName`, `Email`, `Password`, `Role`, `Phone`, `Avatar`) VALUES ('', '', '', '', '', '', '', '')";
-// $result = $conn->query($sql);
-// if ($result->num_rows > 0) {
-//     while ($row = $result->fetch_assoc()) {
-//         echo 'hello';
-//     }
-// } else {
-//     echo 'Khong co ban ghi nao';
-// }
+
+$sql = "INSERT INTO `user` (`Name`, `UserName`, `Email`, `Password`, `Role`) VALUES ('$name', '$username', '$email', '$pass', '1')";
+$result = $conn->query($sql);
+if ($result) {
+    echo '<script>alert("Đăng ký thành công"); window.location="../index.php";</script>';
+} else {
+    echo '<script language="javascript">alert("Có lỗi trong quá trình xử lý"); window.location="index.php";</script>';
+}
 $conn->close();
