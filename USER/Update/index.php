@@ -13,13 +13,13 @@
             box-sizing: border-box;
         }
 
-        #login {
+        #register {
             margin-top: 200px;
             display: flex;
             justify-content: center;
         }
 
-        #login .txtTitle {
+        #register .txtTitle {
             background-color: blue;
             color: white;
             font-size: 24px;
@@ -27,11 +27,15 @@
             margin-bottom: 32px;
         }
 
-        #login .box-login {
+        #register .box-register {
+            border: 1px solid blue;
+            background-color: white;
+            border-radius: 16px;
+            border-collapse: collapse;
             border: 1px solid blue;
         }
 
-        #login .col1 {
+        #register .col1 {
             text-align: right;
             padding-right: 80px;
             padding-top: 4px;
@@ -41,11 +45,11 @@
             font-weight: bold;
         }
 
-        #login .col2 {
+        #register .col2 {
             width: 300px;
         }
 
-        #login .btn {
+        #register .btn {
             background-color: blue;
             color: white;
             padding: 12px 24px;
@@ -60,33 +64,42 @@
             margin: 0 12px;
             padding: 8px 12px;
         }
+
+        .body {
+            background-image: url(./../ASSETS/img/background1.jpg);
+        }
     </style>
 </head>
 
-<body>
-    <div id="login">
-        <div class="box-login">
-            <p class="txtTitle">Đăng Nhập</p>
-            <form action="login.php" method="post">
-                <table class="table-login">
+<body class="body">
+    <?php include('../Components/header.php') ?>
+    <div id="register">
+        <div class="box-register">
+            <p class="txtTitle">Cập nhật thông tin</p>
+            <form action="register.php" method="post">
+                <table class="table-register">
                     <tr>
-                        <td class="col1">Tài khoản :</td>
+                        <td class="col1">Họ Tên :</td>
+                        <td><input type="text" id="name" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1">Tên đăng nhập :</td>
                         <td class="col2"><input type="text" id="username" name="username"></td>
                     </tr>
                     <tr>
-                        <td class="col1">Mật khẩu :</td>
-                        <td><input type="password" id="pass" name="pass"></td>
+                        <td class="col1">Email :</td>
+                        <td><input type="text" id="email" name="email"></td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center"><input type="submit" name="btn_submit" class="btn" value="Đăng nhập"></td>
+                        <td class="col1">Số điện thoại :</td>
+                        <td><input type="text" id="phone" name="phone"></td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center">
-                            <a href="./Register">Đăng ký</a>
-                        </td>
-                        <td colspan="2" align="center">
-                            <a href="./home.php">home</a>
-                        </td>
+                        <td class="col1">Ảnh đại diện :</td>
+                        <td><input type="file" id="avatar" name="avatar"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" name="btn_submit" class="btn" value="Cập nhật"></td>
                     </tr>
 
                 </table>
