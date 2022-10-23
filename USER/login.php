@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isset($_POST['username'])) {
     die('');
 }
@@ -19,6 +20,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     //tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
     $_SESSION['username'] = $username;
+    // echo $_SESSION['username'];
     // Thực thi hành động sau khi lưu thông tin vào session
     // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
     echo '<script language="javascript">window.location="./Home/index.php";</script>';

@@ -2,8 +2,6 @@
 session_start();
 if (!isset($_SESSION['username'])) {
     header('Location: ../index.php');
-} else {
-    echo '<script language="javascript">alert("hi")</script>;';
 }
 ?>
 <!DOCTYPE html>
