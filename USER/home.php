@@ -14,22 +14,27 @@
 </head>
 
 <body>
-    <?php include("./Components/header.php") ?>
+    <div class="d-flex flex-column" style="min-height: 100vh;">
+        <div class="mb-auto">
 
-    <!-- Tabs content -->
-    <div class="tab-content" id="ex1-content">
-        <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-            Tab 1 content
+            <?php include("./Components/header.php") ?>
+
+            <!-- Tabs content -->
+            <div class="tab-content" id="ex1-content">
+                <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                    Tab 1 content
+                </div>
+                <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                    Tab 2 content
+                </div>
+                <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+                    Tab 3 content
+                </div>
+            </div>
         </div>
-        <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-            Tab 2 content
-        </div>
-        <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-            Tab 3 content
-        </div>
+        <!-- Tabs content -->
+        <?php include("./Components/footer.php") ?>
     </div>
-    <!-- Tabs content -->
-    <?php include("./Components/footer.php") ?>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 </body>
 
