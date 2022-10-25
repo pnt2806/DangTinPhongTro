@@ -13,6 +13,8 @@ if (!isset($_SESSION['username'])) {
     <title>Trang chủ</title>
 </head>
 <body>
-    
+    <div>
+        
+    </div>
 </body>
 </html>

@@ -19,7 +19,9 @@ $sql = "SELECT * FROM `user` WHERE `UserName` = '$username' AND `Password` = '$p
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     //tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
-    $_SESSION['username'] = $username;
+    setcookie('username', $username, time() + (86400 * 30), "/"); // 86400 = 1 day
+    // $_COOKIE[$cookie_name];
+    // $_SESSION['username'] = $username;
     // echo $_SESSION['username'];
     // Thực thi hành động sau khi lưu thông tin vào session
     // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
