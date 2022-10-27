@@ -83,6 +83,9 @@ if ($result->num_rows > 0) {
                         <a class="dropdown-item" href="#">My profile</a>
                     </li>
                     <li>
+                        <a class="dropdown-item" href="./Update">Update profile</a>
+                    </li>
+                    <li>
                         <a class="dropdown-item" href="#">Settings</a>
                     </li>
                     <li>

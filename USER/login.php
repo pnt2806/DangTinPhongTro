@@ -16,7 +16,7 @@ if (!$username || !$pass) {
 }
 
 $salt;
-$sqlSalt = "SELECT `UserName` FROM `user`WHERE `UserName` = '$username'";
+$sqlSalt = "SELECT `Salt` FROM `user`WHERE `UserName` = '$username'";
 $resultSalt = $conn->query($sqlSalt);
 if ($resultSalt->num_rows > 0) {
     while ($row = $resultSalt->fetch_assoc()) {
@@ -41,4 +41,3 @@ if ($result->num_rows > 0) {
 } else {
     echo '<script language="javascript">alert("Tên đăng nhập hoặc mật khẩu không đúng"); window.location="index.php";</script>';
 }
-?>

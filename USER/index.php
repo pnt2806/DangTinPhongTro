@@ -63,6 +63,7 @@
             margin: 0 12px;
             padding: 8px 12px;
         }
+
         .boxRegister {
             display: flex;
             flex-direction: row;
@@ -95,9 +96,6 @@
                                 <a href="./Register" style="text-decoration: none; margin-left: 4px; margin-right: 4px;">Đăng ký</a>
                                 <h4>để đăng ký</h4>
                             </div>
-                        </td>
-                        <td colspan="2" align="center">
-                            <a href="./home.php">home</a>
                         </td>
                     </tr>
                 </table>

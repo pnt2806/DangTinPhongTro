@@ -33,7 +33,7 @@ if ($pass !== $re_pass) {
     exit;
 }
 
-$salt = strtotime(time());
+$salt = strtotime("now");
 $pass .= $salt;
 $pass = md5($pass);
 
