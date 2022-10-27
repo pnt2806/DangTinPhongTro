@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
     // echo $_SESSION['username'];
     // Thực thi hành động sau khi lưu thông tin vào session
     // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
-    echo '<script language="javascript">window.location="./home.php";</script>';
+    echo '<script language="javascript">window.location="./HOME";</script>';
 } else {
     echo '<script language="javascript">alert("Tên đăng nhập hoặc mật khẩu không đúng"); window.location="index.php";</script>';
 }

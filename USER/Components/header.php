@@ -1,12 +1,14 @@
 <?php
-include('./Components/ketnoi.php');
+include('../Components/ketnoi.php');
 $username = $_COOKIE["username"];
 $name;
+$avatar;
 $sql = "SELECT * FROM `user` WHERE `UserName` = '$username'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $name = $row['Name'];
+        $avatar = $row['Avatar'];
     }
 }
 ?>
@@ -23,7 +25,7 @@ if ($result->num_rows > 0) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Navbar brand -->
             <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                <img src="./ASSETS/img/logo.png" height="40" alt="MDB Logo" loading="lazy" />
+                <img src="../ASSETS/img/logo.png" height="40" alt="MDB Logo" loading="lazy" />
             </a>
             <!-- Left links -->
             <ul class="nav nav-tabs" id="ex1" role="tablist">
@@ -75,21 +77,21 @@ if ($result->num_rows > 0) {
             <!-- Avatar -->
             <div class="dropdown">
                 <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <img src="./ASSETS/img/image.jpg" class="rounded-circle" width="40" height="40" alt="avatar" loading="lazy" />
+                    <img src="../Uploads/User/<?php echo $username ?>/<?php echo $avatar ?>" class="rounded-circle" width="40" height="40" alt="avatar" loading="lazy" />
                     <p style="margin-top: 12px; margin-left: 6px;"><?php echo $name  ?></p>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                     <li>
-                        <a class="dropdown-item" href="#">My profile</a>
+                        <a class="dropdown-item" href="../Profile">My profile</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="./Update">Update profile</a>
+                        <a class="dropdown-item" href="../Update">Update profile</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="#">Settings</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="./Components/logout.php">Logout</a>
+                        <a class="dropdown-item" href="../Components/logout.php">Logout</a>
                     </li>
                 </ul>
             </div>

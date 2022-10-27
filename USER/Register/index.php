@@ -14,34 +14,34 @@
         }
 
         #register {
-            margin-top: 200px;
+            margin: 100px auto;
+            max-width: 600px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
         }
 
         #register .txtTitle {
+            border-radius: 16px 16px 0 0;
             background-color: blue;
             color: white;
             font-size: 24px;
             padding: 12px;
-            margin-bottom: 32px;
         }
 
         #register .box-register {
+            padding-top: 32px;
             border: 1px solid blue;
             background-color: white;
-            border-radius: 16px;
-            border-collapse: collapse;
-            border: 1px solid blue;
+            border-radius: 0 0 16px 16px;
         }
 
         #register .col1 {
             text-align: right;
-            padding-right: 80px;
+            padding-right: 60px;
             padding-top: 4px;
             padding-bottom: 4px;
             font-size: 20px;
-            padding-left: 60px;
+            padding-left: 40px;
             font-weight: bold;
         }
 
@@ -64,8 +64,8 @@
             border: 1px solid black;
             border-radius: 5px;
             width: '100%';
-            margin: 0 12px;
-            padding: 8px 12px;
+            margin: 0 16px;
+            padding: 10px 12px;
         }
 
         .body {
@@ -76,8 +76,8 @@
 
 <body class="body">
     <div id="register">
+        <div class="txtTitle">Đăng ký thành viên mới</div>
         <div class="box-register">
-            <p class="txtTitle">Đăng ký thành viên mới</p>
             <form action="register.php" method="post">
                 <table class="table-register">
                     <tr>

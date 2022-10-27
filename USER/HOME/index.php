@@ -17,12 +17,12 @@
     <div class="d-flex flex-column" style="min-height: 100vh;">
         <div class="mb-auto">
 
-            <?php include("./Components/header.php") ?>
+            <?php include("../Components/header.php") ?>
 
             <!-- Tabs content -->
             <div class="tab-content" id="ex1-content">
                 <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-                    <?php include("./TABHOME/index.php") ?>
+                    <?php include("../TABHOME/index.php") ?>
                 </div>
                 <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
                     Tab 2 content
@@ -33,7 +33,7 @@
             </div>
         </div>
         <!-- Tabs content -->
-        <?php include("./Components/footer.php") ?>
+        <?php include("../Components/footer.php") ?>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 </body>
