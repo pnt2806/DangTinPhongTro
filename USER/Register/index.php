@@ -55,6 +55,9 @@
             padding: 12px 24px;
             margin-top: 24px;
             margin-bottom: 24px;
+            border: 1px solid black;
+            border-radius: 5px;
+            text-decoration: none;
         }
 
         input {
@@ -98,7 +101,10 @@
                         <td><input type="text" id="email" name="email"></td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center"><input type="submit" name="btn_submit" class="btn" value="Đăng ký"></td>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="btn_submit" class="btn" value="Đăng ký">
+                            <a href="../index.php" class="btn">Trở lại</a>
+                        </td>
                     </tr>
 
                 </table>

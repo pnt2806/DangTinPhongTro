@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Đăng tin thuê phòng</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             <!-- Tabs content -->
             <div class="tab-content" id="ex1-content">
                 <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-                    Tab 1 content
+                    <?php include("./TABHOME/index.php") ?>
                 </div>
                 <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
                     Tab 2 content

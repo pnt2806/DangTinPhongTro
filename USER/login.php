@@ -15,6 +15,18 @@ if (!$username || !$pass) {
     exit;
 }
 
+$salt;
+$sqlSalt = "SELECT `UserName` FROM `user`WHERE `UserName` = '$username'";
+$resultSalt = $conn->query($sqlSalt);
+if ($resultSalt->num_rows > 0) {
+    while ($row = $resultSalt->fetch_assoc()) {
+        $salt = $row['Salt'];
+    }
+}
+
+$pass .= $salt;
+$pass = md5($pass);
+
 $sql = "SELECT * FROM `user` WHERE `UserName` = '$username' AND `Password` = '$pass'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {

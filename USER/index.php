@@ -51,6 +51,9 @@
             padding: 12px 24px;
             margin-top: 24px;
             margin-bottom: 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid black;
         }
 
         input {
@@ -59,6 +62,11 @@
             width: '100%';
             margin: 0 12px;
             padding: 8px 12px;
+        }
+        .boxRegister {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
         }
     </style>
 </head>
@@ -82,15 +90,17 @@
                     </tr>
                     <tr>
                         <td colspan="2" align="center">
-                            <a href="./Register">Đăng ký</a>
+                            <div class="boxRegister">
+                                <h4>Nếu bạn chưa có tài khoản. Mời bạn nhấn vào </h4>
+                                <a href="./Register" style="text-decoration: none; margin-left: 4px; margin-right: 4px;">Đăng ký</a>
+                                <h4>để đăng ký</h4>
+                            </div>
                         </td>
                         <td colspan="2" align="center">
                             <a href="./home.php">home</a>
                         </td>
                     </tr>
-
                 </table>
-
             </form>
         </div>
     </div>
