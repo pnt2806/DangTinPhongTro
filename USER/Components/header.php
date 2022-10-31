@@ -77,7 +77,7 @@ if ($result->num_rows > 0) {
             <!-- Avatar -->
             <div class="dropdown">
                 <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <img src="../Uploads/User/<?php echo $username ?>/<?php echo $avatar ?>" class="rounded-circle" width="40" height="40" alt="avatar" loading="lazy" />
+                    <img src="../Uploads/User/<?php echo $username ?>/<?php echo $avatar ?>" class="rounded-circle" width="40" height="40" loading="lazy" />
                     <p style="margin-top: 12px; margin-left: 6px;"><?php echo $name  ?></p>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
