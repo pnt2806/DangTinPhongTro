@@ -69,6 +69,11 @@
             flex-direction: row;
             justify-content: center;
         }
+
+        .capcha {
+            height: 40px;
+            width: 120px;
+        }
     </style>
 </head>
 
@@ -80,15 +85,32 @@
                 <table class="table-login">
                     <tr>
                         <td class="col1">Tài khoản :</td>
-                        <td class="col2"><input type="text" id="username" name="username"></td>
+                        <td class="col2"><input type="text" id="username" name="username" placeholder="Nhập tài khoản"></td>
                     </tr>
                     <tr>
                         <td class="col1">Mật khẩu :</td>
-                        <td><input type="password" id="pass" name="pass"></td>
+                        <td><input type="password" id="pass" name="pass" placeholder="Nhập mật khẩu"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <img src="./Components/capcha.php" alt="" class="capcha">
+                        </td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center"><input type="submit" name="btn_submit" class="btn" value="Đăng nhập"></td>
+                        <td colspan="2" align="center">
+                            <input type="text" name="capcha" id="" placeholder="Nhập mã capcha">
+                        </td>
                     </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="btn_submit" class="btn" value="Đăng nhập">
+                            <p id="mess"></p>
+                        </td>
+
+                    </tr>
+
                     <tr>
                         <td colspan="2" align="center">
                             <div class="boxRegister">
