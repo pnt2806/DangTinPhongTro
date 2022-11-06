@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-    <title>Đăng tin thuê phòng</title>
+    <title>Chi tiết phòng trọ</title>
 </head>
 
 <body>
@@ -21,14 +21,10 @@
 
             <!-- Tabs content -->
             <div class="tab-content" id="ex1-content">
-                <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-                    <?php include("../TABHOME/index.php") ?>
-                </div>
-                <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                    Tab 2 content
-                </div>
-                <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-                    Tab 3 content
+                <div class="container">
+                    <h1 class="mt-4">Liên hệ với chúng tôi qua đường dây nóng</h1>
+                    <p class="mt-3">Số điện thoại: 18008181</p>
+                    <p class="mt-3">Email: timtrothoaimai@gmail.com</p>
                 </div>
             </div>
         </div>

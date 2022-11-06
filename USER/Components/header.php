@@ -30,22 +30,23 @@ if ($result->num_rows > 0) {
             <!-- Left links -->
             <ul class="nav nav-tabs" id="ex1" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="ex1-tab-1" data-mdb-toggle="tab" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="true">Trang chủ</a>
+                    <a class="nav-link active" href="../TABHOME/index.php">Trang chủ</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="ex1-tab-2" data-mdb-toggle="tab" href="#ex1-tabs-2" role="tab" aria-controls="ex1-tabs-2" aria-selected="false">Thuê phòng</a>
+                    <a class="nav-link"href="../TABHOME/myRoom.php" role="tab">Cho thuê phòng</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="ex1-tab-3" data-mdb-toggle="tab" href="#ex1-tabs-3" role="tab" aria-controls="ex1-tabs-3" aria-selected="false">Cho thuê phòng</a>
+                    <a class="nav-link" href="../TABHOME/search.php">Xem Phòng</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="ex1-tab-2" data-mdb-toggle="tab" href="#ex1-tabs-2" role="tab" aria-controls="ex1-tabs-2" aria-selected="false">Hướng dẫn</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="ex1-tab-3" data-mdb-toggle="tab" href="#ex1-tabs-3" role="tab" aria-controls="ex1-tabs-3" aria-selected="false">Liên hệ</a>
+                    <a class="nav-link" href="../TABHOME/contact.php">Liên hệ</a>
                 </li>
             </ul>
             <!-- Left links -->
+            <form class="d-flex" action="../TABHOME/search.php" method="post">
+                <input name="search" class="form-control me-2" type="search" placeholder="Nhập từ khoá" aria-label="Search">
+                <button name="submit" class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
         <!-- Collapsible wrapper -->
 
