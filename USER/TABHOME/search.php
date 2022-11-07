@@ -32,12 +32,12 @@
                         } else {
                             $text = addslashes($_POST['search']);
                         }
-                        $sql = "SELECT motel.ID, motel.images, motel.title, user.Name, motel.created_at, motel.count_view, motel.address, motel.price FROM `motel` INNER JOIN `user` ON motel.user_id = user.ID INNER JOIN categories on motel.category_id = categories.ID INNER JOIN districts on motel.district_id = districts.ID WHERE motel.title LIKE '%".$text."%'";
+                        $sql = "SELECT motel.ID, motel.images, motel.title, user.Name, motel.created_at, motel.count_view, motel.address, motel.price FROM `motel` INNER JOIN `user` ON motel.user_id = user.ID INNER JOIN categories on motel.category_id = categories.ID INNER JOIN districts on motel.district_id = districts.ID WHERE motel.utilities LIKE '%".$text."%'";
                         $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                         ?>
-                                <div class="card d-flex flex-row" style="width: 40rem;">
+                                <div class="card d-flex flex-row mb-3" style="width: 40rem;">
                                     <img src="../Uploads/User/tranphong1/persion child.PNG" style="width: 18rem;" class="card-img-top" alt="Ảnh phòng trọ">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $row["title"] ?></h5>

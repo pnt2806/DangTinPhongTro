@@ -42,11 +42,10 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>Company name
+                        <i class="fas fa-gem me-3"></i>Mã nguồn mở
                     </h6>
                     <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
+                        Cảm ơn các bạn đã đồng hành và theo dõi chúng tôi suốt quá trình vừa qua.
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -55,16 +54,16 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Products
+                        Công nghệ
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Angular</a>
+                        <a href="#!" class="text-reset">XAMPP</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">React</a>
+                        <a href="#!" class="text-reset">PHP</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Vue</a>
+                        <a href="#!" class="text-reset">MYSQL</a>
                     </p>
                     <p>
                         <a href="#!" class="text-reset">Laravel</a>
@@ -76,7 +75,7 @@
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Useful links
+                        Tiện ích
                     </h6>
                     <p>
                         <a href="#!" class="text-reset">Pricing</a>
@@ -96,7 +95,7 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <h6 class="text-uppercase fw-bold mb-4">Thông tin</h6>
                     <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>
@@ -115,7 +114,7 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2022 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        <a class="text-reset fw-bold" href="https://www.facebook.com/profile.php?id=100012316307616">Thực hiện bởi nhóm 9</a>
     </div>
     <!-- Copyright -->
 </footer>

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-    <title>Đăng tin thuê phòng</title>
+    <title>Quản lý phòng trọ</title>
 </head>
 
 <body>
@@ -41,10 +41,16 @@
                         <tbody>
                             <?php
                             $username = $_COOKIE["username"];
-                            $sql = "SELECT motel.ID, motel.images, motel.title, user.Name, motel.created_at, motel.count_view, motel.address, motel.price FROM `motel` INNER JOIN `user` ON motel.user_id = user.ID INNER JOIN categories on motel.category_id = categories.ID INNER JOIN districts on motel.district_id = districts.ID WHERE user.UserName = '" . $username . "'";
+                            $sql = "SELECT motel.ID, motel.images, motel.title, user.Name, motel.created_at, motel.count_view, motel.address, motel.price, motel.approve FROM `motel` INNER JOIN `user` ON motel.user_id = user.ID INNER JOIN categories on motel.category_id = categories.ID INNER JOIN districts on motel.district_id = districts.ID WHERE user.UserName = '" . $username . "'";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
+                                    $tinhTrang;
+                                    if ($row["approve"] == 0) {
+                                        $tinhTrang = "Còn trống";
+                                    } else {
+                                        $tinhTrang = "Đã đầy";
+                                    }
                             ?>
                                     <tr>
                                         <th scope="row"><?php echo $row["ID"] ?></th>
@@ -53,9 +59,9 @@
                                         <th scope="col"><?php echo $row["created_at"] ?></th>
                                         <th scope="col"><?php echo $row["count_view"] ?></th>
                                         <th scope="col"><?php echo $row["price"] ?></th>
-                                        <th scope="col">Trống</th>
+                                        <th scope="col"><?php echo $tinhTrang ?></th>
                                         <td>
-                                            <button type="button" class="btn btn-warning">Chi tiết</button>
+                                            <a type="button" class="btn btn-warning" href="/documents/DangTinPhongTro/USER/TABHOME/detail.php?id=<?php echo $row["ID"] ?>">Chi tiết</a>
                                             <button type="button" class="btn btn-danger">Xoá bài</button>
                                         </td>
                                     </tr>
