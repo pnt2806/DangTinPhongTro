@@ -36,6 +36,18 @@ if ($result->num_rows > 0) {
                 </li>
 
                 <li class="nav-item">
+                    <a href="../Category" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Loại phòng</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../District" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Địa điểm</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="../User" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>Tài khoản người dùng</p>

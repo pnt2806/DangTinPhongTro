@@ -48,7 +48,6 @@ if (isset($_POST["create"])) {
             echo '<script language="javascript">alert("Upload không thành công"); window.location="../User/add.php";</script>';
         }
     }
-    echo "'$name', '$username', '$email', '$pass', '$role' ,'$phone','$avatar','$salt'";
 
     $sql = "INSERT INTO `user`(`Name`, `UserName`, `Email`, `Password`, `Role`, `Phone`, `Avatar`, `Salt`) VALUES ('$name', '$username', '$email', '$pass', '$role' ,'$phone','$avatar','$salt')";
     $result = $conn->query($sql);
