@@ -27,11 +27,11 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="text-uppercase">thêm loại phòng</h1>
+                            <h1 class="text-uppercase">thêm địa chỉ</h1>
                         </div>
                         <div class="col-sm-6">
                             <p class="breadcrumb float-sm-right">
-                                <a href="../Category" class="btn btn-sm btn-info"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                                <a href="../District" class="btn btn-sm btn-info"><i class="fas fa-arrow-left"></i> Quay lại</a>
                             </p>
                         </div>
                     </div>

@@ -12,7 +12,7 @@ if ($result->num_rows > 0) {
     }
 }
 ?>
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="min-height: 100vh;">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="min-height: 100vh; height: 100%; position: fixed; top: 0; bottom: 0;">
     <!-- Brand Logo -->
     <a href="../../index3.html" class="brand-link">
         <img src="../../USER/Uploads/User/<?php echo $username ?>/<?php echo $avatar ?>" alt="<?php echo $name  ?>" class="brand-image img-circle" style="width:35px;height:35px;">
@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
                 <!-- Add icons to the links using the .nav-icon class
                         with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="../Motel" class="nav-link">
                         <i class="nav-icon fab fa-product-hunt"></i>
                         <p>
                             Thông tin phòng trọ

@@ -3,6 +3,11 @@ session_start();
 if (!isset($_POST['username'])) {
     die('');
 }
+$capcha = addslashes($_POST['capcha']);
+if ($capcha != $_SESSION["capcha"]) {
+    echo '<script>alert("Captcha không chính xác"); window.location="index.php";</script>';
+    exit;
+}
 include('./Components/ketnoi.php');
 
 header('Content-Type: text/html; charset=UTF-8');
