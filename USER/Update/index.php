@@ -14,7 +14,7 @@ if ($result->num_rows > 0) {
     $user_name = $row['UserName'];
     $email = $row['Email'];
     $phone = $row['Phone'];
-    $user_name = $row['Avatar'];
+    $avatar = $row['Avatar'];
 } else {
     echo 'Khong co ban ghi nao';
 }
