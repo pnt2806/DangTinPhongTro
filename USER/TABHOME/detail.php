@@ -79,6 +79,9 @@
         <!-- Tabs content -->
         <?php include("../Components/footer.php") ?>
     </div>
+    <!-- Replace YOUR_API_KEY here by your key above -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 </body>
 

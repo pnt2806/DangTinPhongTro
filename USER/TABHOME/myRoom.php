@@ -23,9 +23,9 @@
             <div class="tab-content" id="ex1-content">
                 <div class="container mt-4">
                     <div class="mb-4">
-                        <button type="button" class="btn btn-success">Đăng tin cho thuê phòng</button>
+                        <a type="button" class="btn btn-success" href="./addRoom.php">Đăng tin cho thuê phòng</a>
                     </div>
-                    <table class="table table-success">
+                    <table class="table table-success table-striped" style="border-radius: 16px">
                         <thead>
                             <tr>
                                 <th scope="col">STT</th>
@@ -62,7 +62,8 @@
                                         <th scope="col"><?php echo $tinhTrang ?></th>
                                         <td>
                                             <a type="button" class="btn btn-warning" href="/documents/DangTinPhongTro/USER/TABHOME/detail.php?id=<?php echo $row["ID"] ?>">Chi tiết</a>
-                                            <button type="button" class="btn btn-danger">Xoá bài</button>
+                                            <a type="button" class="btn btn-primary" href="/documents/DangTinPhongTro/USER/TABHOME/updateStatusRoom.php?id=<?php echo $row["ID"] ?>">Cho thuê</a>
+                                            <a type="button" class="btn btn-danger">Xoá bài</a>
                                         </td>
                                     </tr>
                             <?php
