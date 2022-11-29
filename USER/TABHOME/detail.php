@@ -39,7 +39,7 @@
                         <div class="container">
                             <div class="card d-flex flex-row mt-4" style="width: 75vw">
                                 <div style="width: 40vw">
-                                    <img src="../Uploads/User/tranphong1/persion child.PNG" style="width: 40vw; height: 30vw;" class="card-img-top" alt="Ảnh phòng trọ">
+                                    <img src="../Uploads/Motel/<?php echo $row["images"] ?>" style="width: 40vw; height: 30vw;" class="card-img-top" alt="Ảnh phòng trọ">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $row["title"] ?></h5>
