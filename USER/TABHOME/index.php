@@ -30,8 +30,8 @@
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                         ?>
-                                <div class="card d-flex flex-row mb-3" style="width: 40rem;">
-                                    <img src="../Uploads/User/tranphong1/persion child.PNG" style="width: 18rem;" class="card-img-top" alt="Ảnh phòng trọ">
+                                <div class="card d-flex flex-row mb-3" style="width: 50%;">
+                                    <img src="../Uploads/User/tranphong1/persion child.PNG" style="width: 50%;" class="card-img-top" alt="Ảnh phòng trọ">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $row["title"] ?></h5>
                                         <p class="card-text">Người đăng: <?php echo $row["Name"] ?></p>
@@ -58,8 +58,8 @@
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                         ?>
-                                <div class="card d-flex flex-row mb-3" style="width: 40rem;">
-                                    <img src="../Uploads/User/tranphong1/persion child.PNG" style="width: 18rem;" class="card-img-top" alt="Ảnh phòng trọ">
+                                <div class="card d-flex flex-row mb-3" style="width: 50%;">
+                                    <img src="../Uploads/User/tranphong1/persion child.PNG" style="width: 50%;" class="card-img-top" alt="Ảnh phòng trọ">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $row["title"] ?></h5>
                                         <p class="card-text">Người đăng: <?php echo $row["Name"] ?></p>
@@ -86,8 +86,8 @@
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                         ?>
-                                <div class="card d-flex flex-row mb-3" style="width: 40rem;">
-                                    <img src="../Uploads/User/tranphong1/persion child.PNG" style="width: 18rem;" class="card-img-top" alt="Ảnh phòng trọ">
+                                <div class="card d-flex flex-row mb-3" style="width: 50%;">
+                                    <img src="../Uploads/User/tranphong1/persion child.PNG" style="width: 50%;" class="card-img-top" alt="Ảnh phòng trọ">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $row["title"] ?></h5>
                                         <p class="card-text">Người đăng: <?php echo $row["Name"] ?></p>
