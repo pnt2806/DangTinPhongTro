@@ -17,12 +17,80 @@
     <div class="d-flex flex-column" style="min-height: 100vh;">
         <div class="mb-auto">
 
-            <?php include("../Components/header.php") ?>
+            <?php include("../Components/headerSearch.php") ?>
 
             <!-- Tabs content -->
             <div class="tab-content" id="ex3-content">
-
                 <div class="container mt-4">
+                    <form action="search.php" method="post">
+                        <div class="mt-4 container mb-4">
+                            <div class="row">
+                                <div class="col">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="0" selected>Chọn loại phòng</option>
+                                        <?php
+                                        $name1 = '';
+                                        $sql = "SELECT * FROM `categories`";
+                                        $result = $conn->query($sql);
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
+                                                $id = $row['ID'];
+                                                $name1 = $row['Name'];
+                                        ?>
+                                                <option value="<?php echo $id ?>"><?php echo $name1 ?></option>
+                                        <?php
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
+                                <div class="col">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="0" selected>Chọn địa điểm</option>
+                                        <?php
+                                        $name2 = '';
+                                        $sql = "SELECT * FROM `motel`";
+                                        $result = $conn->query($sql);
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
+                                                $id = $row['ID'];
+                                                $name2 = $row['address'];
+                                        ?>
+                                                <option value="<?php echo $id ?>"><?php echo $name2 ?></option>
+                                        <?php
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
+                                <div class="col">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="0" selected>Chọn mức giá</option>
+                                        <?php
+                                        $name3 = 0;
+                                        $sql = "SELECT * FROM `motel`";
+                                        $result = $conn->query($sql);
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
+                                                $id = $row['ID'];
+                                                $name3 = $row['price'];
+                                        ?>
+                                                <option value="<?php echo $id ?>"><?php echo $name3 ?></option>
+                                        <?php
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
+                                <div class="col">
+                                    <input type="submit" value="Lọc" class="btn btn-primary" style="z-index: 10;">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                     <h3 class="mb-4">Các phòng trọ được tìm thấy</h3>
                     <div class="row wrap">
                         <?php
@@ -32,13 +100,13 @@
                         } else {
                             $text = addslashes($_POST['search']);
                         }
-                        $sql = "SELECT motel.ID, motel.images, motel.title, user.Name, motel.created_at, motel.count_view, motel.address, motel.price FROM `motel` INNER JOIN `user` ON motel.user_id = user.ID INNER JOIN categories on motel.category_id = categories.ID INNER JOIN districts on motel.district_id = districts.ID WHERE motel.title LIKE '%" . $text . "%'";
+                        $sql = "SELECT motel.ID, motel.images, motel.title, user.Name, motel.created_at, motel.count_view, motel.address, motel.price FROM `motel` INNER JOIN `user` ON motel.user_id = user.ID INNER JOIN categories on motel.category_id = categories.ID INNER JOIN districts on motel.district_id = districts.ID WHERE( motel.address LIKE '%" . $name2 . "%') AND (categories.Name LIKE '%" . $name1 . "%') AND (motel.price > $name3)";
                         $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                         ?>
-                                <div class="card d-flex flex-row mb-3" style="width: 40rem;">
-                                    <img src="../Uploads/Motel/<?php echo $row["images"] ?>" style="width: 18rem;" class="card-img-top" alt="Ảnh phòng trọ">
+                                <div class="card d-flex flex-row mb-3" style="width: 50%;">
+                                    <img src="../Uploads/Motel/<?php echo $row["images"] ?>" style="width: 50%;" class="card-img-top" alt="Ảnh phòng trọ">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $row["title"] ?></h5>
                                         <p class="card-text">Người đăng: <?php echo $row["Name"] ?></p>

@@ -15,7 +15,7 @@
 
     <!-- Site wrapper -->
     <div class="wrapper">
-        <?php include("../Components/header.php") ?>
+        <?php include("../Components/headerMyRoom.php") ?>
 
         <div class="content-wrapper">
 

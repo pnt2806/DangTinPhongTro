@@ -17,7 +17,7 @@
     <div class="d-flex flex-column" style="min-height: 100vh;">
         <div class="mb-auto">
 
-            <?php include("../Components/header.php") ?>
+            <?php include("../Components/headerMyRoom.php") ?>
 
             <!-- Tabs content -->
             <div class="tab-content" id="ex1-content">
