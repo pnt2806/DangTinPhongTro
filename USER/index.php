@@ -51,6 +51,9 @@
             padding: 12px 24px;
             margin-top: 24px;
             margin-bottom: 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid black;
         }
 
         input {
@@ -59,6 +62,17 @@
             width: '100%';
             margin: 0 12px;
             padding: 8px 12px;
+        }
+
+        .boxRegister {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .capcha {
+            height: 40px;
+            width: 120px;
         }
     </style>
 </head>
@@ -71,23 +85,42 @@
                 <table class="table-login">
                     <tr>
                         <td class="col1">Tài khoản :</td>
-                        <td class="col2"><input type="text" id="username" name="username"></td>
+                        <td class="col2"><input type="text" id="username" name="username" placeholder="Nhập tài khoản"></td>
                     </tr>
                     <tr>
                         <td class="col1">Mật khẩu :</td>
-                        <td><input type="password" id="pass" name="pass"></td>
+                        <td><input type="password" id="pass" name="pass" placeholder="Nhập mật khẩu"></td>
                     </tr>
+
                     <tr>
-                        <td colspan="2" align="center"><input type="submit" name="btn_submit" class="btn" value="Đăng nhập"></td>
+                        <td colspan="2" align="center">
+                            <img src="./Components/capcha.php" alt="" class="capcha">
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="2" align="center">
-                            <a href="./Register">Đăng ký</a>
+                            <input type="text" name="capcha" id="" placeholder="Nhập mã capcha">
                         </td>
                     </tr>
 
-                </table>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="btn_submit" class="btn" value="Đăng nhập">
+                            <p id="mess"></p>
+                        </td>
 
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <div class="boxRegister">
+                                <h4>Nếu bạn chưa có tài khoản. Mời bạn nhấn vào </h4>
+                                <a href="./Register" style="text-decoration: none; margin-left: 4px; margin-right: 4px;">Đăng ký</a>
+                                <h4>để đăng ký</h4>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
     </div>
