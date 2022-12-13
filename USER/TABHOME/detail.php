@@ -23,11 +23,13 @@
             <div class="tab-content" id="ex1-content">
                 <?php
                 $id = $_GET["id"];
+                $view;
                 $sql = 'SELECT motel.ID, motel.images, motel.title, user.Name, motel.created_at, motel.count_view, motel.address, motel.price, motel.description, motel.utilities, motel.phone, motel.approve FROM `motel` INNER JOIN `user` ON motel.user_id = user.ID INNER JOIN categories on motel.category_id = categories.ID INNER JOIN districts on motel.district_id = districts.ID WHERE motel.ID = ' . $id . '';
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         $tinhTrang;
+                        $view = $row["count_view"] + 1;
                         if ($row["approve"] == 0) {
                             $tinhTrang = "Còn trống";
                         } else {
@@ -73,6 +75,8 @@
                 <?php
                     }
                 }
+                $sqlAdd = 'UPDATE `motel` SET `count_view`= ' . $view . ' WHERE ID = ' . $id . '';
+                $resultAdd = $conn->query($sqlAdd);
                 ?>
             </div>
         </div>
