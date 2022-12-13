@@ -75,6 +75,8 @@
             width: 120px;
         }
     </style>
+    <script src='https://www.google.com/recaptcha/api.js?hl=vi' async defer></script>
+
 </head>
 
 <body>
@@ -91,18 +93,10 @@
                         <td class="col1">Mật khẩu :</td>
                         <td><input type="password" id="pass" name="pass" placeholder="Nhập mật khẩu"></td>
                     </tr>
-
                     <tr>
-                        <td colspan="2" align="center">
-                            <img src="./Components/capcha.php" alt="" class="capcha">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" align="center">
-                            <input type="text" name="capcha" id="" placeholder="Nhập mã capcha">
-                        </td>
-                    </tr>
+                        <td colspan="2" align="center" class="g-recaptcha" data-sitekey="6Le9mHYjAAAAAAvn_QkrOslFB3ssH4eGKHENqf0p"></td>
 
+                    </tr>
                     <tr>
                         <td colspan="2" align="center">
                             <input type="submit" name="btn_submit" class="btn" value="Đăng nhập">
