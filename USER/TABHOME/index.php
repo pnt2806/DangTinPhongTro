@@ -30,8 +30,8 @@
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                         ?>
-                                <div class="card d-flex flex-row mb-3" style="width: 40rem;">
-                                    <img src="../Uploads/Motel/<?php echo $row["images"] ?>" style="width: 18rem;" class="card-img-top" alt="Ảnh phòng trọ">
+                                <div class="card d-flex flex-row mb-3" style="width: 50%;">
+                                    <img src="../Uploads/Motel/<?php echo $row["images"] ?>" style="width: 50%;" class="card-img-top" alt="Ảnh phòng trọ">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $row["title"] ?></h5>
                                         <p class="card-text">Người đăng: <?php echo $row["Name"] ?></p>
@@ -58,22 +58,26 @@
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                         ?>
-                                <div class="card d-flex flex-row mb-3" style="width: 40rem;">
+                                <<<<<<< HEAD <div class="card d-flex flex-row mb-3" style="width: 40rem;">
                                     <img src="../Uploads/Motel/<?php echo $row["images"] ?>" style="width: 18rem;" class="card-img-top" alt="Ảnh phòng trọ">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?php echo $row["title"] ?></h5>
-                                        <p class="card-text">Người đăng: <?php echo $row["Name"] ?></p>
-                                        <p class="card-text">Ngày đăng: <?php echo $row["created_at"] ?></p>
-                                        <p class="card-text">Lượt xem: <?php echo $row["count_view"] ?></p>
-                                        <p class="card-text">Địa chỉ: <?php echo $row["address"] ?></p>
-                                        <p class="card-text">Giá: <?php echo $row["price"] ?></p>
-                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                    =======
+                                    <div class="card d-flex flex-row mb-3" style="width: 50%;">
+                                        <img src="../Uploads/User/tranphong1/persion child.PNG" style="width: 50%;" class="card-img-top" alt="Ảnh phòng trọ">
+                                        >>>>>>> phongdev
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?php echo $row["title"] ?></h5>
+                                            <p class="card-text">Người đăng: <?php echo $row["Name"] ?></p>
+                                            <p class="card-text">Ngày đăng: <?php echo $row["created_at"] ?></p>
+                                            <p class="card-text">Lượt xem: <?php echo $row["count_view"] ?></p>
+                                            <p class="card-text">Địa chỉ: <?php echo $row["address"] ?></p>
+                                            <p class="card-text">Giá: <?php echo $row["price"] ?></p>
+                                            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        </div>
                                     </div>
-                                </div>
-                        <?php
+                            <?php
                             }
                         }
-                        ?>
+                            ?>
                     </div>
                 </div>
 
@@ -86,22 +90,26 @@
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                         ?>
-                                <div class="card d-flex flex-row mb-3" style="width: 40rem;">
+                                <<<<<<< HEAD <div class="card d-flex flex-row mb-3" style="width: 40rem;">
                                     <img src="../Uploads/Motel/<?php echo $row["images"] ?>" style="width: 18rem;" class="card-img-top" alt="Ảnh phòng trọ">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?php echo $row["title"] ?></h5>
-                                        <p class="card-text">Người đăng: <?php echo $row["Name"] ?></p>
-                                        <p class="card-text">Ngày đăng: <?php echo $row["created_at"] ?></p>
-                                        <p class="card-text">Lượt xem: <?php echo $row["count_view"] ?></p>
-                                        <p class="card-text">Địa chỉ: <?php echo $row["address"] ?></p>
-                                        <p class="card-text">Giá: <?php echo $row["price"] ?></p>
-                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                    =======
+                                    <div class="card d-flex flex-row mb-3" style="width: 50%;">
+                                        <img src="../Uploads/User/tranphong1/persion child.PNG" style="width: 50%;" class="card-img-top" alt="Ảnh phòng trọ">
+                                        >>>>>>> phongdev
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?php echo $row["title"] ?></h5>
+                                            <p class="card-text">Người đăng: <?php echo $row["Name"] ?></p>
+                                            <p class="card-text">Ngày đăng: <?php echo $row["created_at"] ?></p>
+                                            <p class="card-text">Lượt xem: <?php echo $row["count_view"] ?></p>
+                                            <p class="card-text">Địa chỉ: <?php echo $row["address"] ?></p>
+                                            <p class="card-text">Giá: <?php echo $row["price"] ?></p>
+                                            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        </div>
                                     </div>
-                                </div>
-                        <?php
+                            <?php
                             }
                         }
-                        ?>
+                            ?>
                     </div>
                 </div>
             </div>

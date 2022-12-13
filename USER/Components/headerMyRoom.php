@@ -30,10 +30,10 @@ if ($result->num_rows > 0) {
             <!-- Left links -->
             <ul class="nav nav-tabs" id="ex1" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" href="../TABHOME/index.php" id="home">Trang chủ</a>
+                    <a class="nav-link" href="../TABHOME/index.php" id="home">Trang chủ</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="../TABHOME/myRoom.php" id="room">Cho thuê phòng</a>
+                    <a class="nav-link active" href="../TABHOME/myRoom.php" id="room">Cho thuê phòng</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" href="../TABHOME/search.php" id="search">Xem Phòng</a>
